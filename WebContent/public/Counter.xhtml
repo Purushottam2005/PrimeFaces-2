@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	
+xmlns:h="http://java.sun.com/jsf/html"
+	
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5">
+			<h:outputText value="Counter: " />
+			<h:outputText id="txt_count" value="#{counterBean.count}" />		
+	</h:panelGrid>
+
+    <p:commandButton value="Count"
+				actionListener="#{counterBean.increment}" update="txt_count"/>
+</h:form>
+</html>

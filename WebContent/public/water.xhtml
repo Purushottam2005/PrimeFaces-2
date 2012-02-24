@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	
+xmlns:h="http://java.sun.com/jsf/html"
+	
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:form>
+
+	<p:messages showDetail="true"/>
+
+	<h:panelGrid columns="3">
+
+		<h:outputLabel value="Search: "/>
+		<p:inputText id="keyword" value="#{watermarkBean.keyword}" required="true" label="Keyword" />
+		<p:watermark for="keyword" value="Search with a keyword" />
+
+	</h:panelGrid>
+
+	<p:commandButton actionListener="#{watermarkBean.search}" value="Regular" ajax="false" />
+	<p:commandButton actionListener="#{watermarkBean.search}" value="Ajax" onclick="PrimeFaces.cleanWatermarks();" oncomplete="PrimeFaces.showWatermarks();"  />
+
+</h:form>
+		
+</html>

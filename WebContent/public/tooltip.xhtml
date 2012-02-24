@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	
+xmlns:h="http://java.sun.com/jsf/html"
+	
+xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+        <title>História do Mengão</title>
+</h:head>
+
+<h:panelGrid columns="3" cellpadding="5">
+
+    <h:outputText value="Focus/Blur: " />
+    <p:inputText id="focus" title="This tooltip is displayed when input gets the focus"/>
+    <p:tooltip for="focus" showEvent="focus" hideEvent="blur" />
+
+    <h:outputText value="Fade: " />
+    <h:outputLink id="fade" value="#">
+        <h:outputText value="Fade Effect" />
+    </h:outputLink>
+    <p:tooltip for="fade" value="Fade effect is used by default" showEffect="fade" hideEffect="fade" />
+
+    <h:outputText value="Slide: " />
+    <h:outputLink id="slide" value="#">
+        <h:outputText value="Slide Effect" />
+    </h:outputLink>
+    <p:tooltip for="slide" value="This tooltip uses slide effect for the animation" showEffect="slide" hideEffect="slide" />
+
+    <h:outputText value="Clip/Explode: " />
+    <h:outputLink id="grow" value="#">
+        <h:outputText value="Clip/Explode Effects" />
+    </h:outputLink>
+    <p:tooltip for="grow" value="This tooltip uses clip/explode effects for the animation" showEffect="clip" hideEffect="explode" />
+
+    <h:outputText value="Content:  " />
+    <h:outputLink id="lnk" value="#">
+        <h:outputText value="PrimeFaces" />
+    </h:outputLink>
+    <p:tooltip for="lnk">
+        <p:graphicImage value="/images/prime_logo.png" />
+    </p:tooltip>
+
+</h:panelGrid>
+</html>                    
